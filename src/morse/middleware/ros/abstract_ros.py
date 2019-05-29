@@ -63,7 +63,8 @@ class AbstractROS(AbstractDatastream):
         # robot.001.sensor.001 = robot001.sensor001
         topic_name = re.sub(r'\.([0-9]+)', r'\1', self.component_name)
         # '/robot001/sensor001'
-        return '/' + topic_name.replace('.', '/')
+        #return '/' + topic_name.replace('.', '/')
+        return topic_name.replace('.', '/')
 
     def finalize(self):
         """ Cleaning """
