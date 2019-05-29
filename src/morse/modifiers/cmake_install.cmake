@@ -1,8 +1,8 @@
-# Install script for directory: /home/phani/morse/src/morse/modifiers
+# Install script for directory: /home/ptsingaman/morse/src/morse/modifiers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr")
+  set(CMAKE_INSTALL_PREFIX "/home/ptsingaman/.morse_build")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,25 +39,25 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/lib/python3.5/site-packages/morse/modifiers/__init__.py;/usr/lib/python3.5/site-packages/morse/modifiers/abstract_modifier.py;/usr/lib/python3.5/site-packages/morse/modifiers/ecef.py;/usr/lib/python3.5/site-packages/morse/modifiers/feet.py;/usr/lib/python3.5/site-packages/morse/modifiers/geocentric.py;/usr/lib/python3.5/site-packages/morse/modifiers/geodetic.py;/usr/lib/python3.5/site-packages/morse/modifiers/imu_noise.py;/usr/lib/python3.5/site-packages/morse/modifiers/ned.py;/usr/lib/python3.5/site-packages/morse/modifiers/odometry_noise.py;/usr/lib/python3.5/site-packages/morse/modifiers/pose_noise.py;/usr/lib/python3.5/site-packages/morse/modifiers/utm.py")
+   "/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/modifiers/__init__.py;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/modifiers/abstract_modifier.py;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/modifiers/ecef.py;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/modifiers/feet.py;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/modifiers/geocentric.py;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/modifiers/geodetic.py;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/modifiers/imu_noise.py;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/modifiers/ned.py;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/modifiers/odometry_noise.py;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/modifiers/pose_noise.py;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/modifiers/utm.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/lib/python3.5/site-packages/morse/modifiers" TYPE FILE FILES
-    "/home/phani/morse/src/morse/modifiers/__init__.py"
-    "/home/phani/morse/src/morse/modifiers/abstract_modifier.py"
-    "/home/phani/morse/src/morse/modifiers/ecef.py"
-    "/home/phani/morse/src/morse/modifiers/feet.py"
-    "/home/phani/morse/src/morse/modifiers/geocentric.py"
-    "/home/phani/morse/src/morse/modifiers/geodetic.py"
-    "/home/phani/morse/src/morse/modifiers/imu_noise.py"
-    "/home/phani/morse/src/morse/modifiers/ned.py"
-    "/home/phani/morse/src/morse/modifiers/odometry_noise.py"
-    "/home/phani/morse/src/morse/modifiers/pose_noise.py"
-    "/home/phani/morse/src/morse/modifiers/utm.py"
+file(INSTALL DESTINATION "/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/modifiers" TYPE FILE FILES
+    "/home/ptsingaman/morse/src/morse/modifiers/__init__.py"
+    "/home/ptsingaman/morse/src/morse/modifiers/abstract_modifier.py"
+    "/home/ptsingaman/morse/src/morse/modifiers/ecef.py"
+    "/home/ptsingaman/morse/src/morse/modifiers/feet.py"
+    "/home/ptsingaman/morse/src/morse/modifiers/geocentric.py"
+    "/home/ptsingaman/morse/src/morse/modifiers/geodetic.py"
+    "/home/ptsingaman/morse/src/morse/modifiers/imu_noise.py"
+    "/home/ptsingaman/morse/src/morse/modifiers/ned.py"
+    "/home/ptsingaman/morse/src/morse/modifiers/odometry_noise.py"
+    "/home/ptsingaman/morse/src/morse/modifiers/pose_noise.py"
+    "/home/ptsingaman/morse/src/morse/modifiers/utm.py"
     )
 endif()
 

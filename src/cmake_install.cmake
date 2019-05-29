@@ -1,8 +1,8 @@
-# Install script for directory: /home/phani/morse/src
+# Install script for directory: /home/ptsingaman/morse/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr")
+  set(CMAKE_INSTALL_PREFIX "/home/ptsingaman/.morse_build")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/phani/morse/src/morse/cmake_install.cmake")
+  include("/home/ptsingaman/morse/src/morse/cmake_install.cmake")
 
 endif()
 

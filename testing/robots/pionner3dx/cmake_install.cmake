@@ -1,8 +1,8 @@
-# Install script for directory: /home/phani/morse/testing/robots/pionner3dx
+# Install script for directory: /home/ptsingaman/morse/testing/robots/pionner3dx
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr")
+  set(CMAKE_INSTALL_PREFIX "/home/ptsingaman/.morse_build")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

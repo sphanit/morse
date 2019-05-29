@@ -2,7 +2,7 @@ import logging; logger = logging.getLogger("morse." + __name__)
 
 import morse.core.sensor
 from morse.helpers.components import add_data, add_property
-from morse.core.mathutils import * 
+from morse.core.mathutils import *
 from math import degrees
 from morse.helpers.velocity import linear_velocities, angular_velocities
 from copy import copy
@@ -49,7 +49,7 @@ class Velocity(morse.core.sensor.Sensor):
 
         has_physics = bool(self.robot_parent.bge_object.getPhysicsId())
         if self._type == 'Automatic':
-            if has_physics: 
+            if has_physics:
                 self._type = 'Velocity'
             else:
                 self._type = 'Position'

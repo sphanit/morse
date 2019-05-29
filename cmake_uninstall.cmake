@@ -1,8 +1,8 @@
-IF(NOT EXISTS "/home/phani/morse/install_manifest.txt")
-  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/home/phani/morse/install_manifest.txt\"")
-ENDIF(NOT EXISTS "/home/phani/morse/install_manifest.txt")
+IF(NOT EXISTS "/home/ptsingaman/morse/install_manifest.txt")
+  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/home/ptsingaman/morse/install_manifest.txt\"")
+ENDIF(NOT EXISTS "/home/ptsingaman/morse/install_manifest.txt")
 
-FILE(READ "/home/phani/morse/install_manifest.txt" files)
+FILE(READ "/home/ptsingaman/morse/install_manifest.txt" files)
 STRING(REGEX REPLACE "\n" ";" files "${files}")
 FOREACH(file ${files})
   MESSAGE(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")

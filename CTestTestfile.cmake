@@ -1,6 +1,6 @@
 # CMake generated Testfile for 
-# Source directory: /home/phani/morse
-# Build directory: /home/phani/morse
+# Source directory: /home/ptsingaman/morse
+# Build directory: /home/ptsingaman/morse
 # 
 # This file includes the relevant testing commands required for 
 # testing this directory and lists subdirectories to be tested as well.

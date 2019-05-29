@@ -1,8 +1,8 @@
-# Install script for directory: /home/phani/morse/testing/middlewares/yarp
+# Install script for directory: /home/ptsingaman/morse/testing/middlewares/yarp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr")
+  set(CMAKE_INSTALL_PREFIX "/home/ptsingaman/.morse_build")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

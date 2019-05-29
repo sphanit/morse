@@ -1,8 +1,8 @@
-# Install script for directory: /home/phani/morse
+# Install script for directory: /home/ptsingaman/morse
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/usr")
+  set(CMAKE_INSTALL_PREFIX "/home/ptsingaman/.morse_build")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -39,55 +39,55 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/lib/python3.5/site-packages/morse/version.py")
+   "/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/version.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/lib/python3.5/site-packages/morse" TYPE FILE FILES "/home/phani/morse/version.py")
+file(INSTALL DESTINATION "/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse" TYPE FILE FILES "/home/ptsingaman/morse/version.py")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/share/morse/data;/usr/share/morse/examples;/usr/share/morse/addons")
+   "/home/ptsingaman/.morse_build/share/morse/data;/home/ptsingaman/.morse_build/share/morse/examples;/home/ptsingaman/.morse_build/share/morse/addons")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/share/morse" TYPE DIRECTORY FILES
-    "/home/phani/morse/data"
-    "/home/phani/morse/examples"
-    "/home/phani/morse/addons"
+file(INSTALL DESTINATION "/home/ptsingaman/.morse_build/share/morse" TYPE DIRECTORY FILES
+    "/home/ptsingaman/morse/data"
+    "/home/ptsingaman/morse/examples"
+    "/home/ptsingaman/morse/addons"
     REGEX ".*blend.$" EXCLUDE REGEX ".*py.$" EXCLUDE REGEX ".*clients.*" EXCLUDE)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/usr/bin/morse;/usr/bin/morseexec;/usr/bin/morse_sync;/usr/bin/morse_inspector;/usr/bin/multinode_server")
+   "/home/ptsingaman/.morse_build/bin/morse;/home/ptsingaman/.morse_build/bin/morseexec;/home/ptsingaman/.morse_build/bin/morse_sync;/home/ptsingaman/.morse_build/bin/morse_inspector;/home/ptsingaman/.morse_build/bin/multinode_server")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/usr/bin" TYPE PROGRAM FILES
-    "/home/phani/morse/bin/morse"
-    "/home/phani/morse/bin/morseexec"
-    "/home/phani/morse/bin/morse_sync"
-    "/home/phani/morse/bin/morse_inspector"
-    "/home/phani/morse/bin/multinode_server"
+file(INSTALL DESTINATION "/home/ptsingaman/.morse_build/bin" TYPE PROGRAM FILES
+    "/home/ptsingaman/morse/bin/morse"
+    "/home/ptsingaman/morse/bin/morseexec"
+    "/home/ptsingaman/morse/bin/morse_sync"
+    "/home/ptsingaman/morse/bin/morse_inspector"
+    "/home/ptsingaman/morse/bin/multinode_server"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/phani/morse/src/cmake_install.cmake")
-  include("/home/phani/morse/bindings/cmake_install.cmake")
-  include("/home/phani/morse/testing/cmake_install.cmake")
+  include("/home/ptsingaman/morse/src/cmake_install.cmake")
+  include("/home/ptsingaman/morse/bindings/cmake_install.cmake")
+  include("/home/ptsingaman/morse/testing/cmake_install.cmake")
 
 endif()
 
@@ -99,5 +99,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/phani/morse/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/ptsingaman/morse/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

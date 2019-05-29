@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/phani/morse
+CMAKE_SOURCE_DIR = /home/ptsingaman/morse
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/phani/morse
+CMAKE_BINARY_DIR = /home/ptsingaman/morse
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -103,8 +103,8 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target edit_cache
 edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake cache editor..."
-	/usr/bin/ccmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -137,14 +137,14 @@ test/fast: test
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/phani/morse && $(CMAKE_COMMAND) -E cmake_progress_start /home/phani/morse/CMakeFiles /home/phani/morse/src/morse/sensors/CMakeFiles/progress.marks
-	cd /home/phani/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/phani/morse/CMakeFiles 0
+	cd /home/ptsingaman/morse && $(CMAKE_COMMAND) -E cmake_progress_start /home/ptsingaman/morse/CMakeFiles /home/ptsingaman/morse/src/morse/sensors/CMakeFiles/progress.marks
+	cd /home/ptsingaman/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/ptsingaman/morse/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/phani/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/clean
+	cd /home/ptsingaman/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/phani/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/preinstall
+	cd /home/ptsingaman/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/phani/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/preinstall
+	cd /home/ptsingaman/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/phani/morse && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/ptsingaman/morse && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src/morse/sensors/CMakeFiles/zbufferto3d.dir/rule:
-	cd /home/phani/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/CMakeFiles/zbufferto3d.dir/rule
+	cd /home/ptsingaman/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/CMakeFiles/zbufferto3d.dir/rule
 .PHONY : src/morse/sensors/CMakeFiles/zbufferto3d.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ zbufferto3d: src/morse/sensors/CMakeFiles/zbufferto3d.dir/rule
 
 # fast build rule for target.
 zbufferto3d/fast:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbufferto3d.dir/build.make src/morse/sensors/CMakeFiles/zbufferto3d.dir/build
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbufferto3d.dir/build.make src/morse/sensors/CMakeFiles/zbufferto3d.dir/build
 .PHONY : zbufferto3d/fast
 
 # Convenience name for target.
 src/morse/sensors/CMakeFiles/zbuffertodepth.dir/rule:
-	cd /home/phani/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/CMakeFiles/zbuffertodepth.dir/rule
+	cd /home/ptsingaman/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/CMakeFiles/zbuffertodepth.dir/rule
 .PHONY : src/morse/sensors/CMakeFiles/zbuffertodepth.dir/rule
 
 # Convenience name for target.
@@ -194,12 +194,12 @@ zbuffertodepth: src/morse/sensors/CMakeFiles/zbuffertodepth.dir/rule
 
 # fast build rule for target.
 zbuffertodepth/fast:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbuffertodepth.dir/build.make src/morse/sensors/CMakeFiles/zbuffertodepth.dir/build
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbuffertodepth.dir/build.make src/morse/sensors/CMakeFiles/zbuffertodepth.dir/build
 .PHONY : zbuffertodepth/fast
 
 # Convenience name for target.
 src/morse/sensors/CMakeFiles/depthaggregator.dir/rule:
-	cd /home/phani/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/CMakeFiles/depthaggregator.dir/rule
+	cd /home/ptsingaman/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/CMakeFiles/depthaggregator.dir/rule
 .PHONY : src/morse/sensors/CMakeFiles/depthaggregator.dir/rule
 
 # Convenience name for target.
@@ -209,12 +209,12 @@ depthaggregator: src/morse/sensors/CMakeFiles/depthaggregator.dir/rule
 
 # fast build rule for target.
 depthaggregator/fast:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/depthaggregator.dir/build.make src/morse/sensors/CMakeFiles/depthaggregator.dir/build
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/depthaggregator.dir/build.make src/morse/sensors/CMakeFiles/depthaggregator.dir/build
 .PHONY : depthaggregator/fast
 
 # Convenience name for target.
 src/morse/sensors/CMakeFiles/_magnetometer.dir/rule:
-	cd /home/phani/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/CMakeFiles/_magnetometer.dir/rule
+	cd /home/ptsingaman/morse && $(MAKE) -f CMakeFiles/Makefile2 src/morse/sensors/CMakeFiles/_magnetometer.dir/rule
 .PHONY : src/morse/sensors/CMakeFiles/_magnetometer.dir/rule
 
 # Convenience name for target.
@@ -224,7 +224,7 @@ _magnetometer: src/morse/sensors/CMakeFiles/_magnetometer.dir/rule
 
 # fast build rule for target.
 _magnetometer/fast:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/_magnetometer.dir/build.make src/morse/sensors/CMakeFiles/_magnetometer.dir/build
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/_magnetometer.dir/build.make src/morse/sensors/CMakeFiles/_magnetometer.dir/build
 .PHONY : _magnetometer/fast
 
 GeomagnetismLibrary.o: GeomagnetismLibrary.c.o
@@ -233,7 +233,7 @@ GeomagnetismLibrary.o: GeomagnetismLibrary.c.o
 
 # target to build an object file
 GeomagnetismLibrary.c.o:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/_magnetometer.dir/build.make src/morse/sensors/CMakeFiles/_magnetometer.dir/GeomagnetismLibrary.c.o
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/_magnetometer.dir/build.make src/morse/sensors/CMakeFiles/_magnetometer.dir/GeomagnetismLibrary.c.o
 .PHONY : GeomagnetismLibrary.c.o
 
 GeomagnetismLibrary.i: GeomagnetismLibrary.c.i
@@ -242,7 +242,7 @@ GeomagnetismLibrary.i: GeomagnetismLibrary.c.i
 
 # target to preprocess a source file
 GeomagnetismLibrary.c.i:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/_magnetometer.dir/build.make src/morse/sensors/CMakeFiles/_magnetometer.dir/GeomagnetismLibrary.c.i
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/_magnetometer.dir/build.make src/morse/sensors/CMakeFiles/_magnetometer.dir/GeomagnetismLibrary.c.i
 .PHONY : GeomagnetismLibrary.c.i
 
 GeomagnetismLibrary.s: GeomagnetismLibrary.c.s
@@ -251,7 +251,7 @@ GeomagnetismLibrary.s: GeomagnetismLibrary.c.s
 
 # target to generate assembly for a file
 GeomagnetismLibrary.c.s:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/_magnetometer.dir/build.make src/morse/sensors/CMakeFiles/_magnetometer.dir/GeomagnetismLibrary.c.s
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/_magnetometer.dir/build.make src/morse/sensors/CMakeFiles/_magnetometer.dir/GeomagnetismLibrary.c.s
 .PHONY : GeomagnetismLibrary.c.s
 
 depthaggregator.o: depthaggregator.c.o
@@ -260,7 +260,7 @@ depthaggregator.o: depthaggregator.c.o
 
 # target to build an object file
 depthaggregator.c.o:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/depthaggregator.dir/build.make src/morse/sensors/CMakeFiles/depthaggregator.dir/depthaggregator.c.o
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/depthaggregator.dir/build.make src/morse/sensors/CMakeFiles/depthaggregator.dir/depthaggregator.c.o
 .PHONY : depthaggregator.c.o
 
 depthaggregator.i: depthaggregator.c.i
@@ -269,7 +269,7 @@ depthaggregator.i: depthaggregator.c.i
 
 # target to preprocess a source file
 depthaggregator.c.i:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/depthaggregator.dir/build.make src/morse/sensors/CMakeFiles/depthaggregator.dir/depthaggregator.c.i
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/depthaggregator.dir/build.make src/morse/sensors/CMakeFiles/depthaggregator.dir/depthaggregator.c.i
 .PHONY : depthaggregator.c.i
 
 depthaggregator.s: depthaggregator.c.s
@@ -278,7 +278,7 @@ depthaggregator.s: depthaggregator.c.s
 
 # target to generate assembly for a file
 depthaggregator.c.s:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/depthaggregator.dir/build.make src/morse/sensors/CMakeFiles/depthaggregator.dir/depthaggregator.c.s
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/depthaggregator.dir/build.make src/morse/sensors/CMakeFiles/depthaggregator.dir/depthaggregator.c.s
 .PHONY : depthaggregator.c.s
 
 magnetometer.o: magnetometer.c.o
@@ -287,7 +287,7 @@ magnetometer.o: magnetometer.c.o
 
 # target to build an object file
 magnetometer.c.o:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/_magnetometer.dir/build.make src/morse/sensors/CMakeFiles/_magnetometer.dir/magnetometer.c.o
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/_magnetometer.dir/build.make src/morse/sensors/CMakeFiles/_magnetometer.dir/magnetometer.c.o
 .PHONY : magnetometer.c.o
 
 magnetometer.i: magnetometer.c.i
@@ -296,7 +296,7 @@ magnetometer.i: magnetometer.c.i
 
 # target to preprocess a source file
 magnetometer.c.i:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/_magnetometer.dir/build.make src/morse/sensors/CMakeFiles/_magnetometer.dir/magnetometer.c.i
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/_magnetometer.dir/build.make src/morse/sensors/CMakeFiles/_magnetometer.dir/magnetometer.c.i
 .PHONY : magnetometer.c.i
 
 magnetometer.s: magnetometer.c.s
@@ -305,7 +305,7 @@ magnetometer.s: magnetometer.c.s
 
 # target to generate assembly for a file
 magnetometer.c.s:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/_magnetometer.dir/build.make src/morse/sensors/CMakeFiles/_magnetometer.dir/magnetometer.c.s
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/_magnetometer.dir/build.make src/morse/sensors/CMakeFiles/_magnetometer.dir/magnetometer.c.s
 .PHONY : magnetometer.c.s
 
 zbufferto3d.o: zbufferto3d.c.o
@@ -314,7 +314,7 @@ zbufferto3d.o: zbufferto3d.c.o
 
 # target to build an object file
 zbufferto3d.c.o:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbufferto3d.dir/build.make src/morse/sensors/CMakeFiles/zbufferto3d.dir/zbufferto3d.c.o
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbufferto3d.dir/build.make src/morse/sensors/CMakeFiles/zbufferto3d.dir/zbufferto3d.c.o
 .PHONY : zbufferto3d.c.o
 
 zbufferto3d.i: zbufferto3d.c.i
@@ -323,7 +323,7 @@ zbufferto3d.i: zbufferto3d.c.i
 
 # target to preprocess a source file
 zbufferto3d.c.i:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbufferto3d.dir/build.make src/morse/sensors/CMakeFiles/zbufferto3d.dir/zbufferto3d.c.i
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbufferto3d.dir/build.make src/morse/sensors/CMakeFiles/zbufferto3d.dir/zbufferto3d.c.i
 .PHONY : zbufferto3d.c.i
 
 zbufferto3d.s: zbufferto3d.c.s
@@ -332,7 +332,7 @@ zbufferto3d.s: zbufferto3d.c.s
 
 # target to generate assembly for a file
 zbufferto3d.c.s:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbufferto3d.dir/build.make src/morse/sensors/CMakeFiles/zbufferto3d.dir/zbufferto3d.c.s
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbufferto3d.dir/build.make src/morse/sensors/CMakeFiles/zbufferto3d.dir/zbufferto3d.c.s
 .PHONY : zbufferto3d.c.s
 
 zbuffertodepth.o: zbuffertodepth.c.o
@@ -341,7 +341,7 @@ zbuffertodepth.o: zbuffertodepth.c.o
 
 # target to build an object file
 zbuffertodepth.c.o:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbuffertodepth.dir/build.make src/morse/sensors/CMakeFiles/zbuffertodepth.dir/zbuffertodepth.c.o
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbuffertodepth.dir/build.make src/morse/sensors/CMakeFiles/zbuffertodepth.dir/zbuffertodepth.c.o
 .PHONY : zbuffertodepth.c.o
 
 zbuffertodepth.i: zbuffertodepth.c.i
@@ -350,7 +350,7 @@ zbuffertodepth.i: zbuffertodepth.c.i
 
 # target to preprocess a source file
 zbuffertodepth.c.i:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbuffertodepth.dir/build.make src/morse/sensors/CMakeFiles/zbuffertodepth.dir/zbuffertodepth.c.i
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbuffertodepth.dir/build.make src/morse/sensors/CMakeFiles/zbuffertodepth.dir/zbuffertodepth.c.i
 .PHONY : zbuffertodepth.c.i
 
 zbuffertodepth.s: zbuffertodepth.c.s
@@ -359,7 +359,7 @@ zbuffertodepth.s: zbuffertodepth.c.s
 
 # target to generate assembly for a file
 zbuffertodepth.c.s:
-	cd /home/phani/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbuffertodepth.dir/build.make src/morse/sensors/CMakeFiles/zbuffertodepth.dir/zbuffertodepth.c.s
+	cd /home/ptsingaman/morse && $(MAKE) -f src/morse/sensors/CMakeFiles/zbuffertodepth.dir/build.make src/morse/sensors/CMakeFiles/zbuffertodepth.dir/zbuffertodepth.c.s
 .PHONY : zbuffertodepth.c.s
 
 # Help Target
@@ -405,6 +405,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/phani/morse && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/ptsingaman/morse && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

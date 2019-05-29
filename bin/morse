@@ -1,4 +1,4 @@
-#! /usr/local/bin/python3.5
+#! /usr/bin/python3
 import sys
 import os
 import platform
@@ -20,7 +20,7 @@ logger.setLevel(logging.INFO)
 ##
 
 try:
-    sys.path.append("/usr/lib/python3.5/site-packages")
+    sys.path.append("/home/ptsingaman/.morse_build/lib/python3/dist-packages")
     from morse.version import VERSION
     from morse.environments import Environment
     from morse.core.exceptions import MorseEnvironmentError
