@@ -308,6 +308,11 @@ MORSE_DATASTREAM_DICT = {
             "moos": 'morse.middleware.moos.pose.PoseNotifier'
             }
         },
+    "morse.sensors.human_marker.HumanMarker": {
+        "default": {
+            "ros": ['morse.middleware.ros.human_marker.HumanMarkerPublisher'],
+            }
+        },
     "morse.sensors.proximity.Proximity": {
         "default": {
             "ros": 'morse.middleware.ros.StringPublisher',

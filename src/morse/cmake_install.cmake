@@ -54,7 +54,7 @@ endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/core;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/actuators;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/helpers;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/blender;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/services;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/robots;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/testing")
+   "/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/core;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/actuators;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/helpers;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/blender;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/services;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/robots;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/testing;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/humans_msgs")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
@@ -69,6 +69,7 @@ file(INSTALL DESTINATION "/home/ptsingaman/.morse_build/lib/python3/dist-package
     "/home/ptsingaman/morse/src/morse/services"
     "/home/ptsingaman/morse/src/morse/robots"
     "/home/ptsingaman/morse/src/morse/testing"
+    "/home/ptsingaman/morse/src/morse/humans_msgs"
     REGEX ".*py.$" EXCLUDE)
 endif()
 
@@ -79,6 +80,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/ptsingaman/morse/src/morse/sensors/cmake_install.cmake")
   include("/home/ptsingaman/morse/src/morse/multinode/cmake_install.cmake")
   include("/home/ptsingaman/morse/src/morse/middleware/cmake_install.cmake")
+  include("/home/ptsingaman/morse/src/morse/humans_msgs/cmake_install.cmake")
 
 endif()
 
