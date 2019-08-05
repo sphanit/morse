@@ -434,6 +434,13 @@ MORSE_DATASTREAM_DICT = {
             "ros": 'morse.middleware.ros.force_torque.WrenchReader',
             }
         },
+
+    "morse.middleware.ros.humans_msgs.msg.HumanArray":{
+        "default": {
+            "ros" : 'morse.middleware.ros.humans_msgs.msg.HumanArray',
+        }
+    },
+
     "morse.actuators.gripper.Gripper": {
         "default": {
             "socket": INTERFACE_DEFAULT_IN,

@@ -4,7 +4,7 @@ INSTALL(FILES __init__.py environments.py
         DESTINATION ${PYTHON_INSTDIR}/morse
         )
 
-INSTALL(DIRECTORY core actuators helpers blender services robots testing humans_msgs
+INSTALL(DIRECTORY core actuators helpers blender services robots testing
         DESTINATION ${PYTHON_INSTDIR}/morse
         REGEX .*py.$ EXCLUDE
         )
@@ -16,5 +16,4 @@ endif()
 
 ADD_SUBDIRECTORY(multinode)
 ADD_SUBDIRECTORY(middleware)
-ADD_SUBDIRECTORY(humans_msgs)
 

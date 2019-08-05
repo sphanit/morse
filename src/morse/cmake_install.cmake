@@ -2,7 +2,7 @@
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/ptsingaman/.morse_build")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -12,7 +12,7 @@ if(NOT DEFINED CMAKE_INSTALL_CONFIG_NAME)
     string(REGEX REPLACE "^[^A-Za-z0-9_]+" ""
            CMAKE_INSTALL_CONFIG_NAME "${BUILD_TYPE}")
   else()
-    set(CMAKE_INSTALL_CONFIG_NAME "release")
+    set(CMAKE_INSTALL_CONFIG_NAME "")
   endif()
   message(STATUS "Install configuration: \"${CMAKE_INSTALL_CONFIG_NAME}\"")
 endif()
@@ -37,50 +37,20 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/__init__.py;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/environments.py")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse" TYPE FILE FILES
-    "/home/ptsingaman/morse/src/morse/__init__.py"
-    "/home/ptsingaman/morse/src/morse/environments.py"
-    )
-endif()
-
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/core;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/actuators;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/helpers;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/blender;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/services;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/robots;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/testing;/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse/humans_msgs")
-  if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-  if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
-    message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
-  endif()
-file(INSTALL DESTINATION "/home/ptsingaman/.morse_build/lib/python3/dist-packages/morse" TYPE DIRECTORY FILES
-    "/home/ptsingaman/morse/src/morse/core"
-    "/home/ptsingaman/morse/src/morse/actuators"
-    "/home/ptsingaman/morse/src/morse/helpers"
-    "/home/ptsingaman/morse/src/morse/blender"
-    "/home/ptsingaman/morse/src/morse/services"
-    "/home/ptsingaman/morse/src/morse/robots"
-    "/home/ptsingaman/morse/src/morse/testing"
-    "/home/ptsingaman/morse/src/morse/humans_msgs"
-    REGEX ".*py.$" EXCLUDE)
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/ptsingaman/morse/src/morse/builder/cmake_install.cmake")
-  include("/home/ptsingaman/morse/src/morse/modifiers/cmake_install.cmake")
-  include("/home/ptsingaman/morse/src/morse/sensors/cmake_install.cmake")
   include("/home/ptsingaman/morse/src/morse/multinode/cmake_install.cmake")
   include("/home/ptsingaman/morse/src/morse/middleware/cmake_install.cmake")
-  include("/home/ptsingaman/morse/src/morse/humans_msgs/cmake_install.cmake")
 
 endif()
 
+if(CMAKE_INSTALL_COMPONENT)
+  set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
+else()
+  set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
+endif()
+
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+file(WRITE "/home/ptsingaman/morse/src/morse/${CMAKE_INSTALL_MANIFEST}"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
